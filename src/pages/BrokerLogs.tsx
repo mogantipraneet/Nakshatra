@@ -80,7 +80,7 @@ const BrokerLogs = () => {
                         { label: 'System Health', value: 'Optimal', color: 'text-[#34c759]' }
                     ].map(stat => (
                         <div key={stat.label} className={`border border-black/[0.04] shadow-[0_4px_24px_rgba(0,0,0,0.02)] rounded-[20px] p-6 ${theme === 'dark' ? 'bg-white/5' : 'bg-white'}`}>
-                            <div className={`text-[13px] font-medium uppercase tracking-[0.05em] mb-2 ${theme === 'dark' ? 'text-white/40' : 'text-[#86868b]'}`}>{stat.label}</div>
+                            <div className={`text-[13px] font-medium uppercase tracking-[0.05em] mb-2 ${theme === 'dark' ? 'text-white/60' : 'text-[#86868b]'}`}>{stat.label}</div>
                             <div className={`text-[36px] font-semibold tracking-tight ${stat.color}`}>{stat.value}</div>
                         </div>
                     ))}
@@ -109,7 +109,7 @@ const BrokerLogs = () => {
                                     exit={{ opacity: 0 }}
                                     className={`flex items-start gap-4 py-2.5 px-3 rounded-[10px] transition-colors ${theme === 'dark' ? 'hover:bg-white/5' : 'hover:bg-[#f5f5f7]'}`}
                                 >
-                                    <div className={`${theme === 'dark' ? 'text-white/40' : 'text-[#86868b]'} whitespace-nowrap pt-0.5`}>{log.time}</div>
+                                    <div className={`${theme === 'dark' ? 'text-white/60' : 'text-[#86868b]'} whitespace-nowrap pt-0.5`}>{log.time}</div>
                                     <div className="pt-0.5">{getStatusIcon(log.status)}</div>
                                     <div className="flex-1">
                                         <span className={`font-semibold mr-3 ${
@@ -118,7 +118,7 @@ const BrokerLogs = () => {
                                         }`}>[{log.service}]</span>
                                         <span className={`leading-relaxed ${theme === 'dark' ? 'text-white/60' : 'text-[#475569]'}`}>{log.message}</span>
                                     </div>
-                                    <div className={`whitespace-nowrap text-[12px] border border-black/5 px-2.5 py-1 rounded-md font-sans ${theme === 'dark' ? 'bg-white/10 text-white/40' : 'bg-[#f5f5f7] text-[#86868b]'}`}>
+                                    <div className={`whitespace-nowrap text-[12px] border border-black/5 px-2.5 py-1 rounded-md font-sans ${theme === 'dark' ? 'bg-white/10 text-white/60' : 'bg-[#f5f5f7] text-[#86868b]'}`}>
                                         {log.node}
                                     </div>
                                 </motion.div>

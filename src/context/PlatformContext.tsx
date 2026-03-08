@@ -18,9 +18,9 @@ export interface Device {
     location: string;
 }
 
-export interface PlatformContextType {
+interface PlatformContextType {
     devices: Device[];
-    theme: 'light' | 'dark';
+    theme: string;
     toggleTheme: () => void;
     refreshData: () => void;
     lastRefreshed: Date;
@@ -109,10 +109,10 @@ const PlatformContext = createContext<PlatformContextType | undefined>(undefined
 
 export const PlatformProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [devices, setDevices] = useState<Device[]>(INITIAL_DEVICES);
-    const [theme, setTheme] = useState<'light' | 'dark'>('light');
+    const theme = 'light';
     const [lastRefreshed, setLastRefreshed] = useState<Date>(new Date());
 
-    const toggleTheme = () => setTheme(prev => prev === 'light' ? 'dark' : 'light');
+    const toggleTheme = () => {};
 
     const refreshData = () => {
         setDevices(prev => prev.map(d => ({

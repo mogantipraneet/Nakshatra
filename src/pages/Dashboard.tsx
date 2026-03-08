@@ -115,7 +115,7 @@ export default function Dashboard() {
                             <RefreshCw size={15} className={refreshing ? 'animate-spin' : ''} />
                             {refreshing ? 'Refreshing…' : 'Refresh'}
                         </div>
-                        <span className={`text-[11px] ${theme === 'dark' ? 'text-white/40' : 'text-[#a1a1a6]'}`}>
+                        <span className={`text-[11px] ${theme === 'dark' ? 'text-white/60' : 'text-[#a1a1a6]'}`}>
                             Updated {lastRefreshed.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
                         </span>
                     </button>
@@ -203,7 +203,7 @@ export default function Dashboard() {
                                                 ? <ShieldCheck size={14} color="#34c759" />
                                                 : <ShieldAlert size={14} color={device.mtlsStatus === 'failed' ? '#ef4444' : '#f59e0b'} />
                                             }
-                                            <span className={`text-[12px] font-medium ${theme === 'dark' ? 'text-white/40' : 'text-[#86868b]'}`}>{device.lastHeartbeat}</span>
+                                            <span className={`text-[12px] font-medium ${theme === 'dark' ? 'text-white/60' : 'text-[#86868b]'}`}>{device.lastHeartbeat}</span>
                                         </div>
                                     </div>
                                 );
@@ -229,14 +229,14 @@ export default function Dashboard() {
                             {/* In a real app we'd map context activity, using a placeholder for now */}
                             {[1, 2, 3, 4, 5].map(id => (
                                 <div key={id} className={`px-5 py-3.5 flex items-start gap-3 transition-colors cursor-pointer ${theme === 'dark' ? 'hover:bg-white/5' : 'hover:bg-[#f9f9fb]'}`}>
-                                    <div className="mt-0.5 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 bg-blue-50 text-[#0071e3]">
+                                    <div className={`mt-0.5 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${theme === 'dark' ? 'bg-[#0071e3]/10 text-[#0071e3]' : 'bg-blue-50 text-[#0071e3]'}`}>
                                         <Activity size={16} />
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <div className="text-[14px] font-medium mb-0.5 truncate">Security Audit Event</div>
                                         <div className={`text-[13px] truncate ${theme === 'dark' ? 'text-white/60' : 'text-[#86868b]'}`}>mTLS Handshake verified for Device #{id}</div>
                                     </div>
-                                    <div className={`text-[12px] font-medium flex-shrink-0 mt-0.5 ${theme === 'dark' ? 'text-white/40' : 'text-[#a1a1a6]'}`}>{id}m ago</div>
+                                    <div className={`text-[12px] font-medium flex-shrink-0 mt-0.5 ${theme === 'dark' ? 'text-white/60' : 'text-[#a1a1a6]'}`}>{id}m ago</div>
                                 </div>
                             ))}
                         </div>

@@ -242,7 +242,7 @@ const Profile = () => {
                             ))}
                             
                             <div className="pt-4 mt-2">
-                                <button onClick={() => alert('Signed out locally.')} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-[10px] text-left text-[#e30000] hover:bg-[#ffe5e5] dark:hover:bg-red-500/10 transition-colors duration-150 font-normal outline-none focus-visible:ring-2 focus-visible:ring-[#e30000]">
+                                <button onClick={() => { window.location.assign('/'); }} className="w-full flex items-center gap-3 px-3 py-2.5 rounded-[10px] text-left text-[#e30000] hover:bg-[#ffe5e5] dark:hover:bg-red-500/10 transition-colors duration-150 font-normal outline-none focus-visible:ring-2 focus-visible:ring-[#e30000]">
                                     <LogOut size={20} strokeWidth={1.5} />
                                     <span className="text-[15px] tracking-[-0.01em]">{t('sign_out', 'Sign Out')}</span>
                                 </button>

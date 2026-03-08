@@ -77,7 +77,7 @@ const Notifications = () => {
                                             <h3 className="text-[17px] font-semibold tracking-[-0.01em]">{item.title}</h3>
                                             <span className={`text-[13px] font-medium hidden sm:block ${theme === 'dark' ? 'text-white/40' : 'text-[#86868b]'}`}>{item.time}</span>
                                         </div>
-                                        <p className={`text-[15px] leading-relaxed mb-1 pr-6 ${theme === 'dark' ? 'text-white/60' : 'text-[#475569]'}`}>{item.desc}</p>
+                                        <p className={`text-[15px] leading-relaxed mb-1 pr-6 ${theme === 'dark' ? 'text-white/70' : 'text-[#475569]'}`}>{item.desc}</p>
                                         <span className={`text-[13px] font-medium sm:hidden block mt-2 ${theme === 'dark' ? 'text-white/40' : 'text-[#86868b]'}`}>{item.time}</span>
                                     </div>
                                     <div className={`absolute right-6 top-1/2 -translate-y-1/2 ${theme === 'dark' ? 'text-white/20' : 'text-[#d2d2d7]'}`}>

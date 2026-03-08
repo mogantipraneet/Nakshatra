@@ -155,8 +155,8 @@ export default function Devices() {
                                             </span>
                                         </div>
                                         <div className="flex items-center gap-3 text-[14px]">
-                                            <span className={theme === 'dark' ? 'text-white/40' : 'text-[#86868b]'}>{device.ip}</span>
-                                            <span className={theme === 'dark' ? 'text-white/20' : 'text-[#86868b]'}>·</span>
+                                            <span className={theme === 'dark' ? 'text-white/60' : 'text-[#86868b]'}>{device.ip}</span>
+                                            <span className={theme === 'dark' ? 'text-white/30' : 'text-[#86868b]'}>·</span>
                                             <span className="flex items-center gap-1" style={{ color: mtls.color }}>
                                                 {mtls.icon}
                                                 {mtls.label}
@@ -283,8 +283,8 @@ export default function Devices() {
                                     <input required value={newLoc} onChange={e => setNewLoc(e.target.value)} placeholder="e.g. Server Room A" className={`w-full px-4 py-3 rounded-[12px] border focus:ring-2 focus:ring-[#0071e3] focus:border-transparent outline-none transition-all ${theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-slate-50 border-slate-200'}`} />
                                 </div>
                                 <div className="pt-4 flex flex-col gap-3">
-                                    <div className="flex items-start gap-2 text-[12px] text-[#86868b] bg-blue-50/50 p-3 rounded-[12px]">
-                                        <ShieldCheck size={14} className="text-[#0071e3] mt-0.5" />
+                                    <div className={`flex items-start gap-2 text-[12px] p-3 rounded-[12px] ${theme === 'dark' ? 'bg-[#0071e3]/10 text-white/70' : 'bg-blue-50/50 text-[#86868b]'}`}>
+                                        <ShieldCheck size={14} className="text-[#0071e3] mt-0.5 flex-shrink-0" />
                                         <span>Provisioning will automatically generate an mTLS 1.3 certificate and sign it with the platform root CA.</span>
                                     </div>
                                     <button type="submit" className="w-full bg-[#0071e3] hover:bg-[#0077ed] text-white font-semibold py-3.5 rounded-[12px] transition-all shadow-md active:scale-[0.98]">

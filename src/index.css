@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Disable OS-level dark mode by overriding the default media query variant to look for a non-existent explicit class */
+@custom-variant dark (&:is(.dark *));
+
 @keyframes headerMorph {
   0% {
     width: 60px;

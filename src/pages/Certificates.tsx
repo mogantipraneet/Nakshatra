@@ -95,12 +95,12 @@ export default function Certificates() {
                 {/* Filter / Search Bar */}
                 <div className={`mb-6 p-2 rounded-[20px] flex items-center gap-3 border ${theme === 'dark' ? 'bg-white/5 border-white/10' : 'bg-white border-black/[0.04]'}`}>
                     <div className="flex-1 flex items-center gap-3 px-4">
-                        <Search size={18} className="text-[#86868b]" />
+                        <Search size={18} className={theme === 'dark' ? 'text-white/40' : 'text-[#86868b]'} />
                         <input 
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             placeholder="Filter by device name or fingerprint..." 
-                            className="bg-transparent border-none outline-none w-full text-[15px] py-2"
+                            className="bg-transparent border-none outline-none w-full text-[15px] py-2 placeholder:text-current placeholder:opacity-40"
                         />
                     </div>
                     <button className={`flex items-center gap-2 px-4 py-2 rounded-xl text-[14px] font-medium transition-colors ${theme === 'dark' ? 'hover:bg-white/10' : 'hover:bg-[#f5f5f7]'}`}>
@@ -144,7 +144,7 @@ export default function Certificates() {
                                         </td>
                                         <td className="px-6 py-4">
                                             <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-[#0071e3]">
+                                                <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-[#0071e3] ${theme === 'dark' ? 'bg-white/10' : 'bg-blue-50'}`}>
                                                     <FileText size={18} />
                                                 </div>
                                                 <div>
@@ -161,7 +161,7 @@ export default function Certificates() {
                                                 </span>
                                             </div>
                                         </td>
-                                        <td className="px-6 py-4 font-mono text-[12px] text-[#86868b]">
+                                        <td className={`px-6 py-4 font-mono text-[12px] ${theme === 'dark' ? 'text-white/60' : 'text-[#86868b]'}`}>
                                             {cert.certFingerprint.substring(0, 16)}...
                                         </td>
                                         <td className="px-6 py-4">
