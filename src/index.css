@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@keyframes headerMorph {
+  0% {
+    width: 60px;
+    padding: 2px;
+    border-radius: 99px;
+  }
+  100% {
+    width: 95%;
+    padding: 2px 16px;
+    border-radius: 20px;
+  }
+}
+
+@keyframes headerMorphReverse {
+  0% {
+    width: 95%;
+    padding: 2px 16px;
+    border-radius: 20px;
+  }
+  100% {
+    width: 60px;
+    padding: 2px;
+    border-radius: 99px;
+  }
+}
+
+@keyframes logoMove {
+  0% {
+    transform: translateX(calc(50vw - 40px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes logoMoveReverse {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(50vw - 40px));
+  }
+}
+
+@keyframes contentReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contentHide {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
